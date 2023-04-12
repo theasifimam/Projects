@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(229, 229, 229);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  color: grey;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.card {
+  width: 35rem;
+  max-height: 30rem;
+  min-height: 15rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card form>div {
+  margin-bottom: 2rem;
+}
+
+.card form input {
+  width: 80%;
+  padding: 0.8rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  border: 1px solid rgb(174, 174, 174);
+}
+
+.card form select {
+  width: 40%;
+  padding: 0.8rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  border: 1px solid rgb(174, 174, 174);
+}
+
+button {
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  border: 1px solid gray;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.primary:hover {
+  background: rgb(56, 56, 56);
+  transition: 200ms ease-in-out;
+}
+
+.primary {
+  background-color: black;
+  color: white;
+}
