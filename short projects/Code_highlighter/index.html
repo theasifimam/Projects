@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <script src="prism.js"></script>
+    <link rel="stylesheet" href="prism.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Code Cheat Sheet</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <span class="logo"><img src="logo.png" alt="logo" style="width: 30px;"></span>
+        <div class="content center">This is HTML Cheat Sheet!</div>
+    </nav>
+
+    <div class="container">
+        <ol>
+            <li>
+                <h3>HTML Boilerplate</h3>
+            </li>
+            <pre class="language-html"><code>&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+    &lttitle&gtSample page&lt/title&gt
+&lt/head&gt
+
+&ltbody&gt
+    &ltnav class="nav"&gt
+        &ltol class="ol"&gt
+            &ltli&gtHome&lt/li&gt
+            &ltli&gtContact us&lt/li&gt
+            &ltli&gtAbout us&lt/li&gt
+            &ltli&gtServices&lt/li&gt
+        &lt/ol&gt
+    &lt/nav&gt
+    &ltdiv class="container"&gt
+        &lth1&gtWelcome to my Website.&lt/h1&gt
+        &ltp&gtLorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, animi et autem perspiciatis nobis molestias
+            rerum consequuntur deleniti maiores, quaerat porro voluptatem commodi!&lt/p&gt
+    &lt/div&gt
+&lt/body&gt
+
+&lt/html&gt</code></pre>
+            <li>
+                <h3>Javascript Promise</h3>
+            </li>
+            <pre class="language-js">
+<code>let myPromise = new Promise(function(myResolve, myReject) {
+// "Producing Code" (May take some time)
+
+    myResolve(); // when successful
+    myReject();  // when error
+});
+
+// "Consuming Code" (Must wait for a fulfilled Promise)
+myPromise.then(
+    function(value) { /* code if successful */ },
+    function(error) { /* code if some error */ }
+);</code>
+            </pre>
+
+
+            <li>
+                <h3>Reactjs</h3>
+            </li>
+            <p>lazy loading in Reactjs</p>
+            <pre class="language-jsx">
+                <code>import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react -router-dom';
+
+const About = lazy(() =&gt import('./About'));
+
+const App = () =&gt (
+    &ltRouter&gt
+    &ltSuspense fallback={&ltdiv&gtLoading...&lt/div&gt}&gt
+    &ltSwitch&gt
+    &ltRoute path="/about" component={About} /&gt
+    &ltRoute
+        path="/"
+        exact
+        render={() =&gt (
+        &ltdiv&gt
+            &lth1&gtThis is the main page&lt/h1&gt
+            &lta href="/about"&gtClick here&lt/a&gt
+        &lt/div&gt
+        )}
+    /&gt
+    &lt/Switch&gt
+    &lt/Suspense&gt
+    &lt/Router&gt
+);
+export default App;</code>
+            </pre>
+
+            <li>
+                <h3>Nodejs</h3>
+                <p>Nodejs post api example</p>
+
+                <pre class="language-js">
+                    <code>var express = require('express');
+var app = express();
+// for parsing the body in POST request
+var bodyParser = require('body-parser');
+
+var users =[{
+    id: 1,
+    name: "John Doe",
+    age : 23,
+    email: "john@doe.com"
+}];
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// GET /api/users
+app.get('/api/users', function(req, res){
+    return res.json(users);    
+});
+
+
+/* POST /api/users
+    {
+        "user": {
+            "id": 3,
+            "name": "Test User",
+            "age" : 20,
+            "email": "test@test.com"
+        }
+    }
+*/
+app.post('/api/users', function (req, res) {
+    var user = req.body.user;
+    users.push(user);
+
+    return res.send('User has been added successfully');
+});
+
+app.listen('3000', function(){
+    console.log('Server listening on port 3000');
+});</code>
+                </pre>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>
