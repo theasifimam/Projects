@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    overflow-x: auto;
+    /* scroll-behavior: smooth; */
+}
+
+.navContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.socialNav {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    background: #333333;
+    color: white;
+}
+
+.contactLink {
+    display: flex;
+    padding: 0 2rem;
+}
+
+.contactLink p {
+    padding-right: 1rem;
+    font-weight: 300;
+}
+
+.socialLink {
+    display: flex;
+    padding: 0 2rem;
+}
+
+.socialLink p {
+    padding-left: 1rem;
+}
+
+nav {
+    display: flex;
+    height: 4.3rem;
+    justify-content: space-between;
+    align-items: center;
+    background: #EBE9E5;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+#logo {
+    padding-left: 4rem;
+}
+
+#logo h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #428BCA;
+    cursor: pointer;
+}
+
+#logo h1:hover {
+    font-weight: 900;
+    font-size: 2rem;
+    color: #128ef9;
+}
+
+
+.nav ul {
+    display: flex;
+}
+
+.nav ul li {
+    padding: 0 2rem;
+    list-style-type: none;
+    font-weight: 400;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav ul li a:hover {
+    color: #428BCA;
+    font-weight: 700;
+}
+
+.intro {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://credencuesta.com/assets/frontend/assets/img/slide/slide-1.jpg);
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    height: 530px;
+    background-color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.welcomeText {
+    padding: 0 4rem;
+    /* filter: brightness(150%); */
+    color: white;
+}
+
+.intro h1 {
+    color: white;
+    font-size: 3rem;
+}
+
+.intro p {
+    font-weight: 300;
+}
+
+.intro button {
+    padding: 0.6rem 2.5rem;
+    background-color: #428BCA;
+    color: white;
+    font-weight: 300;
+    border: none;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+}
+
+.intro button:hover {
+    background-color: #005198;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.companyIntro {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    padding: 5rem;
+    width: 80%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.companyIntro h1 {
+    font-weight: 500;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+.companyIntro p {
+    font-weight: 300;
+}
+
+.quality {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 300;
+    margin: 3rem;
+    padding: 2rem;
+}
+
+.topicWrapper {
+    display: flex;
+}
+
+.qualityTopic {
+    padding: 1rem;
+    margin: 1.5rem;
+}
+
+.qualityTopic ul li {
+    list-style-type: none;
+    font-weight: 300;
+    margin-top: 1rem;
+    display: flex;
+    justify-self: left;
+    text-align: start;
+    font-size: 1.1rem;
+}
+
+.qualityTopic ul li p:before {
+    content: '✓ ';
+    justify-self: left;
+
+}
+
+.offer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.offerWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.offerWrapper h1 {
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    height: 6rem;
+    background: #333333;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+footer p {
+    font-weight: 400;
+    text-align: center;
+}
+
+footer p span {
+    font-weight: 500;
+}
+
+/* ============ Contact Section============= */
+
+.contactUs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.contactUs h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.contactWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.inputFields {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputFields input,
+.inputFields textarea {
+    margin-top: 2.5rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    border: 1px solid grey;
+    outline: none;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+}
+
+.contactBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 190px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 1rem;
+    padding: 1.5rem;
+}
+
+.contactBox p {
+    font-size: 0.8rem;
+}
+
+.contactBox h3 {
+    font-size: 1rem;
+    color: grey;
+    margin: 0.5rem 0;
+}
+
+.contactBox span {
+    font-weight: bold;
+}
+
+.contactBox i {
+    color: #428BCA;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: 2px dotted #428BCA;
+    padding: 1rem;
+}
+
+.primaryBtn {
+    padding: 0.9rem 2.5rem;
+    background-color: #428BCA;
+    align-self: center;
+    color: white;
+    font-weight: 300;
+    border: none;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.primaryBtn:hover {
+    background-color: #005198;
+}
+
+.toTop {
+    position: sticky;
+    background-color: #428BCA;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 5px;
+    bottom: 50px;
+    width: 3rem;
+    margin: 0 1rem;
+}
+
+.toTop a {
+    text-decoration: none;
+    color: white;
+}
