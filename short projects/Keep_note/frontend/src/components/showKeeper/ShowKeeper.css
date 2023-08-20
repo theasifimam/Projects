@@ -1,0 +1,50 @@
+.showKeeper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.keeperCard {
+    display: flex;
+    flex-direction: column;
+    background: rgb(0, 0, 0);
+    padding: 1rem;
+    border-radius: 20px;
+    width: 25%;
+    min-height: 10rem;
+    margin: 1rem;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 20px;
+}
+
+.title {
+    margin-bottom: 1rem;
+    font-family: 'Jost', sans-serif;
+    color: rgb(82, 171, 240);
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.descriptionBox {
+    display: flex;
+    width: 100%;
+    resize: none;
+    flex: 1;
+    color: rgb(102, 201, 156);
+    font-family: 'Jost', sans-serif;
+    outline: none;
+    background: black;
+    font-weight: 300;
+    border: none;
+}
+
+.deleteIcon {
+    color: white;
+    position: absolute;
+    right: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
