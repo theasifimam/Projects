@@ -1,0 +1,38 @@
+.sidebarContainer {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    background: whitesmoke;
+    padding: 1rem;
+}
+
+.active {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background: rgb(206, 206, 206);
+}
+
+.sidebar .inactive {
+    margin-top: 1rem;
+    text-decoration: none;
+    color: grey;
+    padding: 0.5rem 1rem;
+}
+
+.sidebar a:hover {
+    background: rgb(206, 206, 206);
+    color: white;
+    transition: 200ms ease-in-out;
+    border-radius: 5px;
+}
+
+.contentContainer {
+    padding: 2rem;
+}
